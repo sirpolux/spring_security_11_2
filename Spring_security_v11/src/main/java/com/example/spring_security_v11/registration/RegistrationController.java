@@ -23,7 +23,7 @@ public class RegistrationController {
     public String registerUser(RegistrationRequest registrationRequest, final HttpServletRequest request){
         User user=userServices.registerUser(registrationRequest);
         publisher.publishEvent(new RegistrationCompleteEvent(user,applicationUrl(request)));
-        return "";
+        return "Success! Please check your email to complete the registration process.";
     }
 
     @GetMapping("/verify")
