@@ -15,4 +15,5 @@ public class UserRegistrationDetailsService implements UserDetailsService {
                 .map(UserRegistrationDetails::new)
                 .orElseThrow(()->new UsernameNotFoundException("User not found"));
     }
+
 }
